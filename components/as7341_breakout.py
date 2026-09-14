@@ -1,11 +1,16 @@
-"""AS7341 spectral sensor breakout, the small square generic (grow-lab canopy case).
+"""AS7341 spectral sensor breakout, the Adafruit STEMMA QT board (#4698).
 
-Photographed 2026-09-13 and scaled off its own 0.1 in header pitch; those
-estimates (21 x 16, sensor at 18 from the header edge, 7.9 from the top edge)
-stay in grow-lab tagged ESTIMATE. Nothing here until a caliper touches it.
+grow-lab's canopy case is drawn to it from a bench photo (2026-09-14) that
+agrees with Adafruit's published 1.0 x 0.7 in outline; those figures stay in
+grow-lab tagged ESTIMATE because no caliper has touched the board and the
+product page does not print the dimensions where a script can read them.
+Constant names below are the caliper sheet's rows.
 """
 UNIT = "mm"
 PCB_L = None  # CALIPER needed
 PCB_W = None  # CALIPER needed
-SENSOR_X_FROM_HEADER_EDGE = None  # CALIPER needed
-SENSOR_Y_FROM_TOP_EDGE = None  # CALIPER needed
+HOLE_PITCH_X = None  # CALIPER needed
+HOLE_PITCH_Y = None  # CALIPER needed
+HOLE_DIA = None  # CALIPER needed
+LED_Y_FROM_LED_EDGE = None  # CALIPER needed
+QT_SOCKET_H = None  # CALIPER needed
