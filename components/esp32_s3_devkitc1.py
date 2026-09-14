@@ -10,3 +10,4 @@ PCB_W = 25.40  # DATASHEET https://dl.espressif.com/dl/schematics/esp_idf/DXF_ES
 ANTENNA_W = 18.0  # DATASHEET https://dl.espressif.com/dl/schematics/esp_idf/DXF_ESP32-S3-DevKitC-1_V1.1_20220429.dxf
 ANTENNA_OVERHANG = 6.31  # DATASHEET https://dl.espressif.com/dl/schematics/esp_idf/DXF_ESP32-S3-DevKitC-1_V1.1_20220429.dxf
 THICKNESS = 1.60  # CALIPER 2026-09-14 JR
+LENGTH_WITH_ANTENNA = 69.14  # DATASHEET https://dl.espressif.com/dl/schematics/esp_idf/DXF_ESP32-S3-DevKitC-1_V1.1_20220429.dxf
