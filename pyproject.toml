@@ -1,0 +1,23 @@
+# The `components` package: measured physical component dimensions, one writer.
+#   pip install "components @ git+https://github.com/flyinthelyceum/components.git@components-v1"
+#   pip install -e .        (from a checkout)
+[project]
+name = "components"
+version = "1.0"
+description = "Measured physical dimensions of the parts the Innovation Commons builds with. One writer, provenance on every number."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.urls]
+Source = "https://github.com/flyinthelyceum/components"
+
+[project.scripts]
+components = "components.cli:main"
+
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["components"]
