@@ -1,0 +1,64 @@
+name: Tag measurements
+
+# `components measure` tags each measurement commit `components-v1.N` and
+# moves `components-v1`, then pushes all three atomically. A writer whose
+# push path cannot carry tags (a remote session behind a git proxy that
+# permits only the commit) lands the commit on main and leaves the tags to
+# this job. It does exactly what the command would have done, in commit
+# order, and nothing when every measurement commit is already tagged.
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: tag-measurements
+  cancel-in-progress: false
+
+jobs:
+  tag:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          fetch-tags: true
+      - name: Tag every untagged measurement commit, oldest first
+        run: |
+          set -euo pipefail
+          git config user.name "components measure"
+          git config user.email "components@users.noreply.github.com"
+          last=$(git tag -l 'components-v1.*' | sed 's/components-v1\.//' | sort -n | tail -1)
+          last=${last:-0}
+          if git rev-parse -q --verify "components-v1.$last" >/dev/null; then
+            range="components-v1.$last..HEAD"
+          else
+            range="HEAD"
+          fi
+          n=$last
+          moved=0
+          for sha in $(git rev-list --reverse "$range"); do
+            subject=$(git log -1 --format=%s "$sha")
+            case "$subject" in
+              "components: "*) ;;
+              *) continue ;;
+            esac
+            if git tag --points-at "$sha" | grep -q '^components-v1\.[0-9]*$'; then
+              continue
+            fi
+            n=$((n + 1))
+            git tag -a "components-v1.$n" -m "$subject" "$sha"
+            git push origin "components-v1.$n"
+            git tag -f components-v1 "$sha"
+            moved=1
+            echo "tagged components-v1.$n = $sha"
+          done
+          if [ "$moved" = 1 ]; then
+            git push -f origin components-v1
+            echo "components-v1 -> $(git rev-parse components-v1)"
+          else
+            echo "nothing to tag"
+          fi
