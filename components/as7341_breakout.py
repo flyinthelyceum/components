@@ -7,7 +7,7 @@ product page does not print the dimensions where a script can read them.
 Constant names below are the caliper sheet's rows.
 """
 UNIT = "mm"
-PCB_L = None  # CALIPER needed
+PCB_L = 25.68  # CALIPER 2026-09-15 JR
 PCB_W = None  # CALIPER needed
 HOLE_PITCH_X = None  # CALIPER needed
 HOLE_PITCH_Y = None  # CALIPER needed
