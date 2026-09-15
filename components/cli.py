@@ -129,8 +129,13 @@ def cmd_measure(a: argparse.Namespace) -> int:
         if not upstream:
             die(f"origin has no branch {branch}; push it first", 2)
         if head != upstream:
-            die(f"clone is not at origin/{branch} (HEAD {head[:12]}, origin {upstream[:12]}); "
-                f"run `git pull --ff-only` and measure again", 2)
+            behind = git(repo, "merge-base", "--is-ancestor", head, upstream, check=False).returncode == 0
+            if not behind:
+                die(f"clone has diverged from origin/{branch} (HEAD {head[:12]}, origin {upstream[:12]}); "
+                    f"run `git pull --ff-only origin {branch}` and resolve, then measure again", 2)
+            # Clean and merely behind: catch up. A fast-forward on a clean tree cannot lose work.
+            git(repo, "merge", "--ff-only", "--quiet", upstream, code=2)
+            print(f"fast-forwarded {branch} to origin ({upstream[:12]})")
 
     # 3. Write, verify, commit, tag. Any failure leaves the clone porcelain-clean.
     path = pkg / f"{a.part}.py"
