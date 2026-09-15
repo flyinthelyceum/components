@@ -1,0 +1,19 @@
+# components-v1 is the channel consumers pin. It must always point at main HEAD,
+# including hand commits (descriptions, CLI fixes) that `components measure`
+# never sees. Immutable components-v1.N tags stay the audit trail.
+name: move components-v1 to main
+on:
+  push:
+    branches: [main]
+permissions:
+  contents: write
+jobs:
+  tag:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - run: |
+          git tag -f components-v1 "$GITHUB_SHA"
+          git push --force origin refs/tags/components-v1
