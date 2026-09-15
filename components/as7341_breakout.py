@@ -9,7 +9,7 @@ Constant names below are the caliper sheet's rows.
 UNIT = "mm"
 PCB_L = 25.68  # CALIPER 2026-09-15 JR
 PCB_W = None  # CALIPER needed
-HOLE_PITCH_X = None  # CALIPER needed
+HOLE_PITCH_X = 20.17  # CALIPER 2026-09-15 JR
 HOLE_PITCH_Y = None  # CALIPER needed
 HOLE_DIA = None  # CALIPER needed
 LED_Y_FROM_LED_EDGE = None  # CALIPER needed
