@@ -4,3 +4,4 @@ PCB_L = 85  # DATASHEET https://pip-assets.raspberrypi.com/categories/545-raspbe
 PCB_W = 56  # DATASHEET https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008343-DS-1-raspberry-pi-4-mechanical-drawing.pdf
 HOLE_DIA = 2.7  # DATASHEET https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008343-DS-1-raspberry-pi-4-mechanical-drawing.pdf
 HOLE_PITCH_X = 58  # DATASHEET https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008343-DS-1-raspberry-pi-4-mechanical-drawing.pdf
+HOLE_PITCH_Y = 49  # DATASHEET https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008343-DS-1-raspberry-pi-4-mechanical-drawing.pdf
