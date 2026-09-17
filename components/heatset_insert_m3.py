@@ -14,3 +14,4 @@ outward with melt coming up through the thread.
 """
 UNIT = "mm"
 OD = 5.461  # CALIPER 2026-09-17 JR
+LENGTH = 6.07  # CALIPER 2026-09-17 JR
