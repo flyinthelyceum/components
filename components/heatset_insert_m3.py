@@ -5,7 +5,8 @@ a screw into one, not assumed - at 5.461 mm over the knurl it is large enough to
 been an M4, and the vendor markings did not say.
 
 LENGTH IS NOT YET MEASURED. A boss has to be bored deeper than the insert is long, so
-anything that sizes a boss depth needs it. Caliper one and record it.
+anything that sizes a boss depth needs it. Caliper one and record it. It has a row now
+rather than only this paragraph, so a consumer reading the module sees the gap.
 
 A note for whoever sizes a boss around this: the bore wants 0.30-0.50 mm of DIAMETRAL
 interference against OD, on the hole as it comes off the machine - not as modelled. A
@@ -14,4 +15,4 @@ outward with melt coming up through the thread.
 """
 UNIT = "mm"
 OD = 5.461  # CALIPER 2026-09-17 JR
-LENGTH = 6.07  # CALIPER 2026-09-17 JR
+LENGTH = None  # CALIPER needed
