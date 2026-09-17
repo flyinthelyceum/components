@@ -1,14 +1,20 @@
 """AS7341 spectral sensor breakout, the Adafruit STEMMA QT board (#4698).
 
-grow-lab's canopy case is drawn to it from a bench photo (2026-09-14) that
-agrees with Adafruit's published 1.0 x 0.7 in outline; those figures stay in
-grow-lab tagged ESTIMATE because no caliper has touched the board and the
-product page does not print the dimensions where a script can read them.
+Every row is calipered now. Two of them contradicted Adafruit's published
+figures and changed grow-lab's canopy case: the STEMMA QT sockets stand 4.7,
+not the 2.9 a bench photo suggested, and the mounting holes are 2.29, not the
+2.5 the product page states -- an M2.5 does not pass its own board.
+
+The outline is 25.68 x 17.78: a shade over the published 25.4 in length and
+exactly 0.700 in across. The sensor window is NOT centred in Y, which the
+length overrun had made it tempting to infer -- it sits 8.76 from the LED edge
+against 9.02 from the header edge.
+
 Constant names below are the caliper sheet's rows.
 """
 UNIT = "mm"
 PCB_L = 25.68  # CALIPER 2026-09-15 JR
-PCB_W = None  # CALIPER needed
+PCB_W = 17.78  # CALIPER 2026-09-17 JR
 HOLE_PITCH_X = 20.17  # CALIPER 2026-09-15 JR
 HOLE_PITCH_Y = 12.62  # CALIPER 2026-09-15 JR
 HOLE_DIA = 2.29  # CALIPER 2026-09-15 JR
