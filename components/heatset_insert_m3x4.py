@@ -13,4 +13,4 @@ as it comes off the machine, not as modelled.
 """
 UNIT = "mm"
 OD = 5.461  # CALIPER 2026-09-18 JR
-LENGTH = 4.42  # CALIPER 2026-09-18 JR
+LENGTH = 4.191  # CALIPER 2026-09-18 JR
