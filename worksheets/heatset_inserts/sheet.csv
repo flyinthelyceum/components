@@ -8,7 +8,7 @@ m2x8-L,heatset_insert_m2x8,LENGTH,M2 × 8 × 3.5 — overall length,"outside jaw
 m2x10-D,heatset_insert_m2x10,OD,M2 × 10 × 3.5 — diameter over the knurl,outside jaws on the widest band; rotate the insert and take the largest reading,3.5,3.531,"CALIPER 2026-09-18 JR, read in inches"
 m2x10-L,heatset_insert_m2x10,LENGTH,M2 × 10 × 3.5 — overall length,"outside jaws end to end, square to the axis",10,10.287,"CALIPER 2026-09-18 JR, read in inches"
 m3x4-D,heatset_insert_m3x4,OD,M3 × 4 × 5 — diameter over the knurl,outside jaws on the widest band; rotate the insert and take the largest reading,5,5.461,"CALIPER 2026-09-18 JR, read in inches"
-m3x4-L,heatset_insert_m3x4,LENGTH,M3 × 4 × 5 — overall length,"outside jaws end to end, square to the axis",4,4.42,"CALIPER 2026-09-18 JR, read in inches"
+m3x4-L,heatset_insert_m3x4,LENGTH,M3 × 4 × 5 — overall length,"outside jaws end to end, square to the axis",4,4.191,"CALIPER 2026-09-18 JR, read in inches; re-measured, first reading 4.42 was wrong"
 m3x6-D,heatset_insert_m3x6,OD,M3 × 6 × 5 — diameter over the knurl,outside jaws on the widest band; rotate the insert and take the largest reading,5,5.461,"CALIPER 2026-09-18 JR, read in inches"
 m3x6-L,heatset_insert_m3x6,LENGTH,M3 × 6 × 5 — overall length,"outside jaws end to end, square to the axis",6,6.07,"CALIPER 2026-09-18 JR, read in inches"
 m3x8-D,heatset_insert_m3x8,OD,M3 × 8 × 5 — diameter over the knurl,outside jaws on the widest band; rotate the insert and take the largest reading,5,5.461,"CALIPER 2026-09-18 JR, read in inches"
