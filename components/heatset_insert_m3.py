@@ -1,18 +1,18 @@
-"""heatset_insert_m3: brass heat-set insert, M3 internal thread.
+"""heatset_insert_m3: SUPERSEDED. Do not import.
 
-The stock the lyceum has on the shelf as of 2026-09-17. Thread CONFIRMED M3 by running
-a screw into one, not assumed - at 5.461 mm over the knurl it is large enough to have
-been an M4, and the vendor markings did not say.
+Created when this box was thought to hold one M3 insert. It holds four lengths, and
+they differ by more than 6 mm - so a single M3 module can only ever be right about
+diameter and wrong about length for three callers out of four.
 
-LENGTH IS NOT YET MEASURED. A boss has to be bored deeper than the insert is long, so
-anything that sizes a boss depth needs it. Caliper one and record it. It has a row now
-rather than only this paragraph, so a consumer reading the module sees the gap.
+Use the sized module instead: heatset_insert_m3x4, heatset_insert_m3x6, heatset_insert_m3x8, heatset_insert_m3x10.
 
-A note for whoever sizes a boss around this: the bore wants 0.30-0.50 mm of DIAMETRAL
-interference against OD, on the hole as it comes off the machine - not as modelled. A
-ladder built for a 4.6 mm insert asked 1.3-1.9 mm of one of these and bowed the posts
-outward with melt coming up through the thread.
+This module deliberately exports nothing. A stale import fails at the point of use with
+this message rather than quietly handing back the wrong length.
 """
-UNIT = "mm"
-OD = 5.461  # CALIPER 2026-09-17 JR
-LENGTH = None  # CALIPER needed
+
+
+def __getattr__(name):
+    raise AttributeError(
+        "heatset_insert_m3 is superseded: the box holds four M3 lengths. "
+        "Import one of heatset_insert_m3x4, heatset_insert_m3x6, heatset_insert_m3x8, heatset_insert_m3x10 instead."
+    )
