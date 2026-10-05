@@ -15,3 +15,4 @@ HEADER_ROW_SPACING = 22.86  # DATASHEET https://dl.espressif.com/dl/schematics/e
 USB_C_CENTRES_APART = 13.4  # DATASHEET https://dl.espressif.com/dl/schematics/esp_idf/DXF_ESP32-S3-DevKitC-1_V1.1_20220429.dxf
 OVERALL_H = 4.75  # CALIPER 2026-10-05 JR
 USB_C_W = 9.14  # CALIPER 2026-10-05 JR
+USB_C_H = 3.18  # CALIPER 2026-10-05 JR
