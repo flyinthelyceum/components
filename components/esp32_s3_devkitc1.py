@@ -13,3 +13,4 @@ THICKNESS = 1.60  # CALIPER 2026-09-14 JR
 LENGTH_WITH_ANTENNA = 69.14  # DATASHEET https://dl.espressif.com/dl/schematics/esp_idf/DXF_ESP32-S3-DevKitC-1_V1.1_20220429.dxf
 HEADER_ROW_SPACING = 22.86  # DATASHEET https://dl.espressif.com/dl/schematics/esp_idf/DXF_ESP32-S3-DevKitC-1_V1.1_20220429.dxf
 USB_C_CENTRES_APART = 13.4  # DATASHEET https://dl.espressif.com/dl/schematics/esp_idf/DXF_ESP32-S3-DevKitC-1_V1.1_20220429.dxf
+OVERALL_H = 4.75  # CALIPER 2026-10-05 JR
